@@ -1,4 +1,4 @@
-package org.example.entidades;
+package org.example.entidades.usuario;
 
 import org.example.exception.unchecked.EAutenticacaoInvalidaException;
 import org.example.exception.unchecked.EValorInvalidoException;
