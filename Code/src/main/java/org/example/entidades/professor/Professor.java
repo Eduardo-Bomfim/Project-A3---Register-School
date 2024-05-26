@@ -1,6 +1,6 @@
 package org.example.entidades.professor;
 
-import org.example.entidades.Usuario;
+import org.example.entidades.usuario.Usuario;
 
 import java.util.List;
 

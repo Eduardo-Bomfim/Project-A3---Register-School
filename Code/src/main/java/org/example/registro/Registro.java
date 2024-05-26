@@ -1,6 +1,6 @@
 package org.example.registro;
 
-import org.example.entidades.Usuario;
+import org.example.entidades.usuario.Usuario;
 import org.example.exception.unchecked.EEstadoIlegalException;
 import org.example.exception.unchecked.EIdNaoEncontradoException;
 

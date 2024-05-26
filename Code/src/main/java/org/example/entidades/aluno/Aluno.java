@@ -1,6 +1,6 @@
 package org.example.entidades.aluno;
 
-import org.example.entidades.Usuario;
+import org.example.entidades.usuario.Usuario;
 
 public class Aluno extends Usuario {
 
