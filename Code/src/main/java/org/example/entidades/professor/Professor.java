@@ -37,5 +37,10 @@ public class Professor extends Usuario {
         return null;
     }
 
-
+    @Override
+    public String toString() {
+        return "Professor{" +
+                "titulacao='" + titulacao + '\'' +
+                "} " + super.toString();
+    }
 }
