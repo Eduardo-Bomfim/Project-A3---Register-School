@@ -2,6 +2,7 @@ package org.example.entidades.coordenador;
 
 import org.example.entidades.usuario.Usuario;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Coordenador extends Usuario {
@@ -21,10 +22,6 @@ public class Coordenador extends Usuario {
         this.areaCoordenacao = areaCoordenacao;
     }
 
-    public List consultarUsuarios(){
-        return null;
-    }
-
     public List consultarDisciplinas(){
         return null;
     }
@@ -36,9 +33,15 @@ public class Coordenador extends Usuario {
     public List consultarSalas(){
         return null;
     }
-    
+
     public void definirLimitesAlunosSala(){}
 
     public void gerarRelatório(){}
-    
+
+    @Override
+    public String toString() {
+        return "Coordenador{" +
+                "areaCoordenacao='" + areaCoordenacao + '\'' +
+                "} " + super.toString();
+    }
 }
