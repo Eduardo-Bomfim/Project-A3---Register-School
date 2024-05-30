@@ -8,7 +8,7 @@ class Disciplina {
 
     private long id;
     private String nome, codigo, cargaHoraria, turno, assuntos;
-    private ArrayList <Professor> professores;
+    private ArrayList<Professor> professores;
 
     public Disciplina(long id, String nome, String codigo, String cargaHoraria, String turno, String assuntos) {
         this.id = id;
@@ -68,27 +68,41 @@ class Disciplina {
         this.assuntos = assuntos;
     }
 
+
     public void adicionarProfessor(Professor professor) {
         professores.add(professor);
     }
 
-    public void removerProfessor(long registroAcademico){
-        for(Professor professor : professores){
-           if (professor.getRegistroAcademico() == registroAcademico){
-               professores.remove(professor);
-           }else{
-               throw new RuntimeException("Não existe professor com esse registro academico!");
-           }
+    public void removerProfessor(long registroAcademico) {
+        for (Professor professor : professores) {
+            if (professor.getRegistroAcademico() == registroAcademico) {
+                professores.remove(professor);
+            } else {
+                throw new RuntimeException("Não existe professor com esse registro academico!");
+            }
         }
     }
 
-    public ArrayList consultarProfessoresDisponiveis(){
-       if(professores.isEmpty()){
-           throw new RuntimeException("Não tem professores disponíveis!");
-       }
-        for(Professor professor : professores){
+    public ArrayList consultarProfessoresDisponiveis() {
+        if (professores.isEmpty()) {
+            throw new RuntimeException("Não tem professores disponíveis!");
+        }
+        for (Professor professor : professores) {
             return professores;
         }
         return null;
+    }
+
+    @Override
+    public String toString() {
+        return "Disciplina{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", codigo='" + codigo + '\'' +
+                ", cargaHoraria='" + cargaHoraria + '\'' +
+                ", turno='" + turno + '\'' +
+                ", assuntos='" + assuntos + '\'' +
+                ", professores=" + professores +
+                '}';
     }
 }
