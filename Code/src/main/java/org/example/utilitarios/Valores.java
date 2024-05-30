@@ -1,24 +1,20 @@
 package org.example.utilitarios;
 
-import java.time.LocalDateTime;
-
 public class Valores {
-    
-    private long id;
-    private double valorAula;
-    private LocalDateTime dataHora;
 
-    public Valores(long id, double valorAula, LocalDateTime dataHora) {
-        this.id = id;
+    private double valorAula;
+    private int dataHora;
+
+    public Valores(double valorAula, int horas) {
         this.valorAula = valorAula;
         this.dataHora = dataHora;
     }
 
-    public LocalDateTime getDataHora() {
+    public int getDataHora() {
         return dataHora;
     }
 
-    public void setDataHora(LocalDateTime dataHora) {
+    public void setDataHora(int dataHora) {
         this.dataHora = dataHora;
     }
 
@@ -30,13 +26,16 @@ public class Valores {
         this.valorAula = valorAula;
     }
 
-    public long getId() {
-        return id;
+    public void valorPorAula(int datahora, double valorAula){
+        this.dataHora = datahora;
+        this.valorAula = valorAula;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    @Override
+    public String toString() {
+        return "Valores{" +
+                ", valor=" + valorAula +
+                ", horas=" + dataHora +
+                '}';
     }
-
-    public void consultarValorAula(){}
 }
