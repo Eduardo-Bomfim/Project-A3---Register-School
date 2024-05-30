@@ -12,10 +12,10 @@ public abstract class Usuario {
 
     //Construtor
     public Usuario(long id, long registroAcademico, String nome, String email, String senha) {
-        if (id < 0){
+        if (id < 0) {
             throw new EValorInvalidoException("O valor do id não pode ser menor que 0.");
         }
-        if (registroAcademico < 0){
+        if (registroAcademico < 0) {
             throw new EValorInvalidoException("O valor do registro acadêmico não pode ser menor que 0.");
         }
         this.id = id;
@@ -73,13 +73,24 @@ public abstract class Usuario {
     }
 
     public boolean autenticar(String email, String senha) {
-        if (!this.email.equalsIgnoreCase(email)){
+        if (!this.email.equalsIgnoreCase(email)) {
             throw new EAutenticacaoInvalidaException("Email incorreto.");
         }
-        if (!this.senha.equals(senha)){
+        if (!this.senha.equals(senha)) {
             throw new EAutenticacaoInvalidaException("Senha incorreta.");
         }
 
         return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "registroAcademico=" + registroAcademico +
+                ", id=" + id +
+                ", nome='" + nome + '\'' +
+                ", email='" + email + '\'' +
+                ", senha='" + senha + '\'' +
+                '}';
     }
 }
