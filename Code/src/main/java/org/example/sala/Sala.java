@@ -68,13 +68,12 @@ public class Sala {
         this.disponibilidade = disponibilidade;
     }
 
-    public Sala reservar(){
+    public void reservar(){
         if(disponibilidade){
             disponibilidade = false;
         }else{
             throw new EEstadoIlegalException("A sala já está reservada.");
         }
-        return null;
     }
 
     public void cancelarReserva(){
