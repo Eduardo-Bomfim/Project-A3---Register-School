@@ -1,5 +1,7 @@
 package org.example.unidade;
 
+import org.example.exception.unchecked.EEstadoIlegalException;
+import org.example.exception.unchecked.EIdNaoEncontradoException;
 import org.example.exception.unchecked.ELimiteExcedidoException;
 import org.example.sala.Sala;
 
@@ -80,5 +82,18 @@ public class Unidade {
             return sala;
         }
         return null;
+    }
+
+    public Sala procurarSala(long id){
+        if (!salas.isEmpty()){
+            for (Sala sala : salas){
+                if (sala.getId() == id){
+                    return sala;
+                }else{
+                    throw new EIdNaoEncontradoException("Sala não localizada.");
+                }
+            }
+        }
+        throw new EEstadoIlegalException("Essa unidade não possuí salas.");
     }
 }
