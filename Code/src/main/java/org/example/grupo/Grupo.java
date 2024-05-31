@@ -91,4 +91,11 @@ public class Grupo {
         }
     }
 
+    public void reservaSala(Sala sala){
+        sala.reservar();
+    }
+
+    public void cancelarReservaSala(Sala sala){
+        sala.cancelarReserva();
+    }
 }
