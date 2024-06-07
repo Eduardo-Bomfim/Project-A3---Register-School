@@ -4,14 +4,16 @@ import org.example.exception.unchecked.EEstadoIlegalException;
 
 public class Sala {
 
+    // Atributos da classe Sala
     private long id;
-    private short numero;
-    private short capacidade;
-    private short andar;
+    private int numero;
+    private int capacidade;
+    private int andar;
     private String tipoSala;
     private boolean disponibilidade;
 
-    public Sala(long id, short numero, short capacidade, short andar, String tipoSala) {
+    // Construtor da classe Sala
+    public Sala(long id, int numero, int capacidade, int andar, String tipoSala){
         this.id = id;
         this.numero = numero;
         this.capacidade = capacidade;
@@ -20,35 +22,32 @@ public class Sala {
         disponibilidade = true;
     }
 
+    // Métodos getters e setters
     public long getId() {
         return id;
     }
 
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public short getNumero() {
+    public int getNumero() {
         return numero;
     }
 
-    public void setNumero(short numero) {
+    public void setNumero(int numero) {
         this.numero = numero;
     }
 
-    public short getCapacidade() {
+    public int getCapacidade() {
         return capacidade;
     }
 
-    public void setCapacidade(short capacidade) {
+    public void setCapacidade(int capacidade) {
         this.capacidade = capacidade;
     }
 
-    public short getAndar() {
+    public int getAndar() {
         return andar;
     }
 
-    public void setAndar(short andar) {
+    public void setAndar(int andar) {
         this.andar = andar;
     }
 
@@ -68,19 +67,21 @@ public class Sala {
         this.disponibilidade = disponibilidade;
     }
 
-    public void reservar(){
-        if(disponibilidade){
-            disponibilidade = false;
-        }else{
-            throw new EEstadoIlegalException("A sala já está reservada.");
+    // Método para reservar uma sala
+    public void reservar() {
+        if (isDisponibilidade()) {
+            setDisponibilidade(false);
+        } else {
+            throw new EEstadoIlegalException("Sala já está reservada.");
         }
     }
 
-    public void cancelarReserva(){
-        if(!disponibilidade){
-            disponibilidade = true;
-        }else {
-            throw new EEstadoIlegalException("A sala nunca foi reservada.");
+    // Método para cancelar a reserva de uma sala
+    public void cancelarReserva() {
+        if (!isDisponibilidade()) {
+            setDisponibilidade(true);
+        } else {
+            throw new EEstadoIlegalException("Sala já está disponível.");
         }
     }
 }
