@@ -11,16 +11,17 @@ import java.util.ArrayList;
 
 public class Registro {
 
+    // Atributos da classe Registro
     private long id;
     private ArrayList<Usuario> usuarios;
 
-    //Construtor
+    // Construtor da classe Registro
     public Registro(long id) {
         this.id = id;
         usuarios = new ArrayList<>();
     }
 
-    //Getters e Setters
+    // Métodos getters e setters
     public long getId() {
         return id;
     }
@@ -29,16 +30,16 @@ public class Registro {
         this.id = id;
     }
 
-    //Método
-
-    //Esse método vai cadastrar os usuários no sistema
+    // Método para cadastrar um usuário
     public void cadastroUsuario(Usuario usuario) {
         if (usuario != null) {
             usuarios.add(usuario);
+        }else {
+            throw new NullPointerException("As informações do usuário estão vazias.");
         }
-        throw new NullPointerException("As informações do usuário estão vazias.");
     }
 
+    // Método para excluir um usuário com base no id
     public void excluirUsuario(long id) {
         for (Usuario usuario : usuarios) {
             if (usuario.getId() == id) {
@@ -48,7 +49,27 @@ public class Registro {
         }
     }
 
-    //Esse método vai retorna os Coordenadores que estão cadastrados no ArrayList<Usuario>
+    // Método para procurar um usuário com base no id
+    public Usuario procurarUsuario(long id) {
+        for (Usuario usuario : usuarios) {
+            if (usuario.getId() == id) {
+                return usuario;
+            }
+        }
+        throw new EEstadoIlegalException("Nenhum usuário encontrado com o ID informado.");
+    }
+
+    // Método para autenticar um usuário com base no email e senha
+    public Usuario autenticarUsuario(String email, String senha){
+        for (Usuario usuario : usuarios) {
+            if (usuario.autenticar(email, senha)){
+                return usuario;
+            }
+        }
+        throw new EEstadoIlegalException("Nenhum usuario encontrado com e-mail ou senha informada.");
+    }
+
+    // Método para consultar coordenadores cadastrados
     public ArrayList<Coordenador> consultarCoordenadores() {
         if (!usuarios.isEmpty()) {
             ArrayList<Coordenador> coordenadores = new ArrayList<>();
@@ -62,7 +83,7 @@ public class Registro {
         throw new EEstadoIlegalException("Nenhum usuário cadastrado.");
     }
 
-    //Esse método vai retorna os Professores que estão cadastrados no ArrayList<Usuario>
+    // Método para consultar professores cadastrados
     public ArrayList<Professor> consultarProfessores() {
         if (!usuarios.isEmpty()) {
             ArrayList<Professor> professores = new ArrayList<>();
@@ -76,7 +97,7 @@ public class Registro {
         throw new EEstadoIlegalException("Nenhum usuário cadastrado.");
     }
 
-    //Esse método vai retorna os Alunos que estão cadastrados no ArrayList<Usuario>
+    // Método para consultar alunos cadastrados
     public ArrayList<Aluno> consultarAlunos() {
         if (!usuarios.isEmpty()) {
             ArrayList<Aluno> alunos = new ArrayList<>();
@@ -90,7 +111,7 @@ public class Registro {
         throw new EEstadoIlegalException("Nenhum usuário cadastrado.");
     }
 
-    //Esse método vai retorna os Usuários que estão cadastrados no ArrayList<Usuario>
+    // Método para consultar o registro de usuários
     public Usuario consultarRegistroUsuarios() {
         if (!usuarios.isEmpty()) {
             for (Usuario usuario : usuarios) {
@@ -100,11 +121,13 @@ public class Registro {
         throw new EEstadoIlegalException("Nenhum usuário cadastrado.");
     }
 
-    @Override
-    public String toString() {
-        return "Registro{" +
-                "id=" + id +
-                ", usuarios=" + usuarios +
-                '}';
+    // Método para procurar um coordenador com base no id
+    public Coordenador procurarCoordenador(long id){
+        for (Usuario usuario : usuarios) {
+            if (usuario instanceof Coordenador && usuario.getId() == id){
+                return (Coordenador) usuario;
+            }
+        }
+        throw new EEstadoIlegalException("Nenhum coordenador encontrado.");
     }
 }
