@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cab1b6bc-f8fa-4342-b920-ed415de8fa89" name="Changes" comment="add method procurarSala" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Eduardo-Bomfim&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Eduardo-Bomfim/Project-A3---Register-School.git&quot;,
+    &quot;accountId&quot;: &quot;2700d017-53d9-47be-bbc6-98db17f3274b&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2h26Kf9pcZkEGUXS8bmsDsFX2Hd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;refactor&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/eduar/OneDrive/Área de Trabalho&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task id="LOCAL-00001" summary="moved Usuario from folder usuario">
+      <option name="closed" value="true" />
+      <created>1716693955952</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716693955953</updated>
+    </task>
+    <task id="LOCAL-00002" summary="updating the address of the User class">
+      <option name="closed" value="true" />
+      <created>1716694042908</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1716694042908</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cab1b6bc-f8fa-4342-b920-ed415de8fa89" name="Changes" comment="" />
+      <created>1716779769388</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1716779769388</updated>
+      <workItem from="1716779771546" duration="1787000" />
+      <workItem from="1717084906377" duration="12840000" />
+      <workItem from="1717119704741" duration="17000" />
+      <workItem from="1717174889556" duration="2576000" />
+      <workItem from="1717187980605" duration="4946000" />
+      <workItem from="1717200443540" duration="9861000" />
+      <workItem from="1717253069599" duration="14633000" />
+      <workItem from="1717596605492" duration="2748000" />
+      <workItem from="1717641017063" duration="4154000" />
+      <workItem from="1717671359048" duration="121000" />
+      <workItem from="1717707974205" duration="8306000" />
+      <workItem from="1717720968780" duration="276000" />
+    </task>
+    <task id="LOCAL-00003" summary="add method toString, consultarAlunos, consultarProfessores and consultarCoordenadores">
+      <option name="closed" value="true" />
+      <created>1717087195307</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1717087195307</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add method toString">
+      <option name="closed" value="true" />
+      <created>1717087361667</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1717087361668</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add method toString">
+      <option name="closed" value="true" />
+      <created>1717087413378</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1717087413378</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add method toString">
+      <option name="closed" value="true" />
+      <created>1717087575890</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1717087575890</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add method toString">
+      <option name="closed" value="true" />
+      <created>1717087593965</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1717087593965</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add method toString">
+      <option name="closed" value="true" />
+      <created>1717088393113</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1717088393114</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add method valorPorAula">
+      <option name="closed" value="true" />
+      <created>1717110502016</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1717110502016</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add method valorPorAula, remove attribute id, modify attribute dataHora">
+      <option name="closed" value="true" />
+      <created>1717110690456</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1717110690457</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add method valorPorAula, remove attribute id, modify attribute dataHora">
+      <option name="closed" value="true" />
+      <created>1717110763397</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1717110763397</updated>
+    </task>
+    <task id="LOCAL-00012" summary="add method reservaSala and cancelarReservaSala">
+      <option name="closed" value="true" />
+      <created>1717178284679</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1717178284679</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add method definirValoresAulas and getValorAula">
+      <option name="closed" value="true" />
+      <created>1717188278209</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1717188278209</updated>
+    </task>
+    <task id="LOCAL-00014" summary="modify type the method reservar for void">
+      <option name="closed" value="true" />
+      <created>1717188379640</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1717188379640</updated>
+    </task>
+    <task id="LOCAL-00015" summary="add method procurarSala">
+      <option name="closed" value="true" />
+      <created>1717188421611</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1717188421611</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="moved Usuario from folder usuario" />
+    <MESSAGE value="updating the address of the User class" />
+    <MESSAGE value="add method toString, consultarAlunos, consultarProfessores and consultarCoordenadores" />
+    <MESSAGE value="add method toString" />
+    <MESSAGE value="add method valorPorAula" />
+    <MESSAGE value="add method valorPorAula, remove attribute id, modify attribute dataHora" />
+    <MESSAGE value="add method reservaSala and cancelarReservaSala" />
+    <MESSAGE value="add method definirValoresAulas and getValorAula" />
+    <MESSAGE value="modify type the method reservar for void" />
+    <MESSAGE value="add method procurarSala" />
+    <option name="LAST_COMMIT_MESSAGE" value="add method procurarSala" />
+  </component>
+</project>
