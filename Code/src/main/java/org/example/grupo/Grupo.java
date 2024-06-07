@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 public class Grupo {
 
+    // Atributos da classe Grupo
     private long id;
     private String nome;
     private String turno;
@@ -16,7 +17,7 @@ public class Grupo {
     private int limiteAlunos;
     private ArrayList<Aluno> alunos;
 
-    //Construtor
+    // Construtor da classe Grupo
     public Grupo(long id, String nome, String turno, String horarioAula) {
         this.id = id;
         this.nome = nome;
@@ -26,8 +27,7 @@ public class Grupo {
         alunos = new ArrayList<>();
     }
 
-    //Getters e Setters
-
+    // Métodos getters e setters
     public long getId() {
         return id;
     }
@@ -60,8 +60,7 @@ public class Grupo {
         return limiteAlunos;
     }
 
-    //Métodos
-
+    // Método para consultar a lista de alunos inscritos
     public ArrayList<Aluno> consultarAlunosInscritos(){
         if(!alunos.isEmpty()){
             for(Aluno aluno : alunos){
@@ -73,6 +72,7 @@ public class Grupo {
         return null;
     }
 
+    // Método para adicionar um aluno ao grupo
     public void adicionarAluno(Aluno aluno){
         if (limiteAlunos < alunos.size()){
             alunos.add(aluno);
@@ -81,20 +81,17 @@ public class Grupo {
         }
     }
 
-    public void removerAluno(int id){
-        for(Aluno aluno: alunos){
-            if (aluno.getId() == id){
-                alunos.remove(aluno);
-            }else {
-                throw new EIdNaoEncontradoException("ID " + id + " não encontrado na lista.");
-            }
-        }
+    // Método para remover um aluno do grupo
+    public void removerAluno(Aluno aluno){
+        alunos.remove(aluno);
     }
 
+    // Método para reservar uma sala
     public void reservaSala(Sala sala){
         sala.reservar();
     }
 
+    // Método para cancelar a reserva de uma sala
     public void cancelarReservaSala(Sala sala){
         sala.cancelarReserva();
     }
