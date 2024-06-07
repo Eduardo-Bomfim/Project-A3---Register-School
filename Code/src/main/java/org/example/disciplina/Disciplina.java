@@ -1,25 +1,34 @@
+// Classe Disciplina
+
 package org.example.disciplina;
 
+import org.example.entidades.coordenador.Area;
 import org.example.entidades.professor.Professor;
 
 import java.util.ArrayList;
 
-class Disciplina {
+public class Disciplina {
 
+    // Atributos da classe Disciplina
     private long id;
     private String nome, codigo, cargaHoraria, turno, assuntos;
     private ArrayList<Professor> professores;
+    private Area area;
 
-    public Disciplina(long id, String nome, String codigo, String cargaHoraria, String turno, String assuntos) {
+    // Construtor da classe Disciplina
+    public Disciplina(long id, String nome, String codigo, String cargaHoraria, String turno, String assuntos,
+                      Area area) {
         this.id = id;
         this.nome = nome;
         this.codigo = codigo;
         this.cargaHoraria = cargaHoraria;
         this.turno = turno;
         this.assuntos = assuntos;
+        this.area = area;
         professores = new ArrayList<>();
     }
 
+    // Métodos getters e setters
     public long getId() {
         return id;
     }
@@ -68,11 +77,20 @@ class Disciplina {
         this.assuntos = assuntos;
     }
 
+    public Area getArea() {
+        return area;
+    }
 
+    public void setArea(Area area) {
+        this.area = area;
+    }
+
+    // Método para adicionar um professor à lista de professores
     public void adicionarProfessor(Professor professor) {
         professores.add(professor);
     }
 
+    // Método para remover um professor da lista com base no registro acadêmico
     public void removerProfessor(long registroAcademico) {
         for (Professor professor : professores) {
             if (professor.getRegistroAcademico() == registroAcademico) {
@@ -83,6 +101,7 @@ class Disciplina {
         }
     }
 
+    // Método para consultar a lista de professores disponíveis
     public ArrayList consultarProfessoresDisponiveis() {
         if (professores.isEmpty()) {
             throw new RuntimeException("Não tem professores disponíveis!");
@@ -93,6 +112,7 @@ class Disciplina {
         return null;
     }
 
+    // Método toString para representar a disciplina como uma string
     @Override
     public String toString() {
         return "Disciplina{" +
