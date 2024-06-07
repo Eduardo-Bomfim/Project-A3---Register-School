@@ -3,20 +3,20 @@ package org.example.entidades.usuario;
 import org.example.exception.unchecked.EAutenticacaoInvalidaException;
 import org.example.exception.unchecked.EValorInvalidoException;
 
-//Classe abstrata
+// Classe abstrata Usuario
 public abstract class Usuario {
 
-    //Variáveis
+    // Variáveis
     private long registroAcademico, id;
     private String nome, email, senha;
 
-    //Construtor
+    // Construtor
     public Usuario(long id, long registroAcademico, String nome, String email, String senha) {
         if (id < 0) {
-            throw new EValorInvalidoException("O valor do id não pode ser menor que 0.");
+            throw new EValorInvalidoException("O valor do id não pode ser menor que 0."); // Verifica se o id é válido
         }
         if (registroAcademico < 0) {
-            throw new EValorInvalidoException("O valor do registro acadêmico não pode ser menor que 0.");
+            throw new EValorInvalidoException("O valor do registro acadêmico não pode ser menor que 0."); // Verifica se o registro acadêmico é válido
         }
         this.id = id;
         this.registroAcademico = registroAcademico;
@@ -25,7 +25,7 @@ public abstract class Usuario {
         this.senha = senha;
     }
 
-    //Métodos Gets e Setters
+    // Métodos Gets e Setters
     public long getRegistroAcademico() {
         return registroAcademico;
     }
@@ -66,20 +66,19 @@ public abstract class Usuario {
         this.senha = senha;
     }
 
-    //Métodos da classe
+    // Métodos da classe
     public void editarDados(String email, String senha) {
         this.email = email;
-        this.senha = senha;
+        this.senha = senha; // Edita os dados do usuário
     }
 
     public boolean autenticar(String email, String senha) {
         if (!this.email.equalsIgnoreCase(email)) {
-            throw new EAutenticacaoInvalidaException("Email incorreto.");
+            throw new EAutenticacaoInvalidaException("Email incorreto."); // Verifica se o email está correto
         }
         if (!this.senha.equals(senha)) {
-            throw new EAutenticacaoInvalidaException("Senha incorreta.");
+            throw new EAutenticacaoInvalidaException("Senha incorreta."); // Verifica se a senha está correta
         }
-
         return true;
     }
 
