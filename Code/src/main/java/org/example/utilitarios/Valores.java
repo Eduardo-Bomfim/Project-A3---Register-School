@@ -1,13 +1,26 @@
 package org.example.utilitarios;
 
+import java.time.LocalDateTime;
+
 public class Valores {
 
+    // Atributos da classe Valores
     private double valorAula;
     private int dataHora;
 
-    public Valores(double valorAula, int horas) {
+    // Construtor da classe Valores
+    public Valores(double valorAula, int dataHora){
         this.valorAula = valorAula;
         this.dataHora = dataHora;
+    }
+
+    // Métodos getters e setters
+    public double getValorAula() {
+        return valorAula;
+    }
+
+    public void setValorAula(double valorAula) {
+        this.valorAula = valorAula;
     }
 
     public int getDataHora() {
@@ -18,24 +31,18 @@ public class Valores {
         this.dataHora = dataHora;
     }
 
-    public double getValorAula() {
-        return valorAula;
+    // Método para definir o valor e a data/hora de uma aula
+    public void valorPorAula(int dataHora, double valorAula){
+        setDataHora(getDataHora());
+        setValorAula(getValorAula());
     }
 
-    public void setValorAula(double valorAula) {
-        this.valorAula = valorAula;
-    }
-
-    public void valorPorAula(int datahora, double valorAula){
-        this.dataHora = datahora;
-        this.valorAula = valorAula;
-    }
-
+    // Método toString para representar os valores como uma string
     @Override
     public String toString() {
         return "Valores{" +
-                ", valor=" + valorAula +
-                ", horas=" + dataHora +
+                "valorAula=" + valorAula +
+                ", dataHora=" + dataHora +
                 '}';
     }
 }
