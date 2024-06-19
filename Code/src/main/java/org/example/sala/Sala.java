@@ -84,4 +84,16 @@ public class Sala {
             throw new EEstadoIlegalException("Sala já está disponível.");
         }
     }
+
+    @Override
+    public String toString() {
+        return "Sala{" +
+                "id=" + id +
+                ", numero=" + numero +
+                ", capacidade=" + capacidade +
+                ", andar=" + andar +
+                ", tipoSala='" + tipoSala + '\'' +
+                ", disponibilidade=" + disponibilidade +
+                '}';
+    }
 }

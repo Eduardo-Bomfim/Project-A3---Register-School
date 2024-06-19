@@ -13,18 +13,15 @@ public class Disciplina {
     private long id;
     private String nome, codigo, cargaHoraria, turno, assuntos;
     private ArrayList<Professor> professores;
-    private Area area;
 
     // Construtor da classe Disciplina
-    public Disciplina(long id, String nome, String codigo, String cargaHoraria, String turno, String assuntos,
-                      Area area) {
+    public Disciplina(long id, String nome, String codigo, String cargaHoraria, String turno, String assuntos) {
         this.id = id;
         this.nome = nome;
         this.codigo = codigo;
         this.cargaHoraria = cargaHoraria;
         this.turno = turno;
         this.assuntos = assuntos;
-        this.area = area;
         professores = new ArrayList<>();
     }
 
@@ -75,14 +72,6 @@ public class Disciplina {
 
     public void setAssuntos(String assuntos) {
         this.assuntos = assuntos;
-    }
-
-    public Area getArea() {
-        return area;
-    }
-
-    public void setArea(Area area) {
-        this.area = area;
     }
 
     // Método para adicionar um professor à lista de professores

@@ -45,8 +45,8 @@ public class Registro {
             if (usuario.getId() == id) {
                 usuarios.remove(usuario);
             }
-            throw new EIdNaoEncontradoException("Usuário não encontrado.");
         }
+        throw new EIdNaoEncontradoException("Usuário não encontrado.");
     }
 
     // Método para procurar um usuário com base no id

@@ -95,4 +95,16 @@ public class Grupo {
     public void cancelarReservaSala(Sala sala){
         sala.cancelarReserva();
     }
+
+    @Override
+    public String toString() {
+        return "Grupo{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", turno='" + turno + '\'' +
+                ", horarioAula='" + horarioAula + '\'' +
+                ", limiteAlunos=" + limiteAlunos +
+                ", alunos=" + alunos +
+                '}';
+    }
 }

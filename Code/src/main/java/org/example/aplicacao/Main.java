@@ -14,19 +14,24 @@ import java.util.Scanner;
 
 public class Main {
 
-    // Instância de Registro para gerenciar usuários
-    static Registro registro = new Registro(1);
-    // Instância de Unidade representando uma universidade
-    static Unidade unidade = new Unidade(1L, "UNIFACS", "Tancredo Neves", "7199999-9999", "36888999-87", (short) 5);
-    // Scanner para ler entradas do usuário
-    static Scanner sc = new Scanner(System.in);
-    // Instância de Grupo representando uma turma
-    static Grupo grupo = new Grupo(1, "124567891", "Matutino", "08:30");
-    //Instância de Disciplina representando uma materia
-    static Disciplina disciplina = new Disciplina(1, "Geografia", "123", "120", "Matutino", "Globalização",
-            Area.CIENCIAS_HUMANAS);
+    private final Registro registro;
+    private final Unidade unidade;
+    private final Scanner sc;
+    private final Grupo grupo = null;
+    private final Disciplina disciplina = null;
+
+    public Main() {
+        this.registro = new Registro(1);
+        this.unidade = new Unidade(1, "UNIFACS", "Tancredo Neves", "7199999-9999", "36888999-87", (short) 5);
+        this.sc = new Scanner(System.in);
+    }
 
     public static void main(String[] args) {
+        Main app = new Main();
+        app.run();
+    }
+
+    public void run() {
         int menu1, menu2, menuCadastro;
 
         do {
@@ -62,7 +67,6 @@ public class Main {
                                         """);
                                 menuCadastro = sc.nextInt();
 
-                                // Chama métodos de cadastro baseados na escolha do usuário
                                 switch (menuCadastro) {
                                     case 1 -> cadastrarCoordenador();
                                     case 2 -> cadastrarAluno();
@@ -83,8 +87,7 @@ public class Main {
         sc.close();
     }
 
-    // Método para cadastrar um coordenador
-    static void cadastrarCoordenador() {
+    private void cadastrarCoordenador() {
         System.out.println("Digite o seu nome: ");
         String nome = sc.next();
         System.out.println("Digite o seu email: ");
@@ -102,7 +105,6 @@ public class Main {
         int opcao = sc.nextInt();
         Area areaAtuacao;
 
-        // Define a área de atuação com base na escolha do usuário
         switch (opcao) {
             case 1 -> areaAtuacao = Area.CIENCIAS_HUMANAS;
             case 2 -> areaAtuacao = Area.CIENCIAS_DA_NATUREZA;
@@ -111,12 +113,10 @@ public class Main {
             default -> throw new IllegalStateException("Opção inválida!");
         }
 
-        // Registra o coordenador no sistema
-        registro.cadastroUsuario(new Coordenador(1, 12, nome, email, senha, areaAtuacao));
+        registro.cadastroUsuario(new Coordenador(1, 1, nome, email, senha, areaAtuacao));
     }
 
-    // Método para cadastrar um professor
-    static void cadastrarProfessor() {
+    private void cadastrarProfessor() {
         System.out.println("Digite o seu nome: ");
         String nome = sc.next();
         System.out.println("Digite o seu email: ");
@@ -133,7 +133,6 @@ public class Main {
         int opcao = sc.nextInt();
         Area areaAtuacao;
 
-        // Define a área de atuação com base na escolha do usuário
         switch (opcao) {
             case 1 -> areaAtuacao = Area.CIENCIAS_HUMANAS;
             case 2 -> areaAtuacao = Area.CIENCIAS_DA_NATUREZA;
@@ -142,12 +141,10 @@ public class Main {
             default -> throw new IllegalStateException("Opção inválida!");
         }
 
-        // Registra o professor no sistema
-        registro.cadastroUsuario(new Professor(1, 12, nome, email, senha, areaAtuacao));
+        registro.cadastroUsuario(new Professor(2, 12, nome, email, senha, areaAtuacao));
     }
 
-    // Método para cadastrar um aluno
-    static void cadastrarAluno() {
+    private void cadastrarAluno() {
         System.out.println("Digite o seu nome: ");
         String nome = sc.next();
         System.out.println("Digite o seu email: ");
@@ -155,23 +152,19 @@ public class Main {
         System.out.println("Digite a senha: ");
         String senha = sc.next();
 
-        // Registra o aluno no sistema
-        registro.cadastroUsuario(new Aluno(1, 12, nome, email, senha));
+        registro.cadastroUsuario(new Aluno(3, 123, nome, email, senha));
     }
 
-    // Método para autenticar um usuário
-    static Usuario loginUsuario() {
+    private Usuario loginUsuario() {
         System.out.println("Digite o seu email: ");
         String email = sc.next();
         System.out.println("Digite a sua senha: ");
         String senha = sc.next();
 
-        // Autentica o usuário
         return registro.autenticarUsuario(email, senha);
     }
 
-    // Método que exibe a tela de login e redireciona para o menu apropriado
-    static void telaLogin() {
+    private void telaLogin() {
         Usuario usuarioLogado = loginUsuario();
         if (usuarioLogado != null) {
             System.out.println("Login efetuado com sucesso!");
@@ -188,8 +181,7 @@ public class Main {
         }
     }
 
-    // Menu específico para coordenadores
-    static void menuCoordenador(Coordenador coordenador) {
+    private void menuCoordenador(Coordenador coordenador) {
         int opcao;
         do {
             System.out.println("""
@@ -206,22 +198,27 @@ public class Main {
                     """);
             opcao = sc.nextInt();
 
-            // Chama métodos do coordenador baseados na escolha do usuário
             switch (opcao) {
-                case 1 -> coordenador.criarSala(unidade, 1, (short) 1, (short) 5, (short) 1, "Laboratório");
-                case 2 -> coordenador.criarGrupo(unidade, 1, "7° Ano", "Matutino", "120");
-                case 3 -> coordenador.criarDisciplinas(unidade, 1, "Matemática", "120987", "120", "Matutino", "Equação 2° grau", Area.EXATAS);
-                case 4 -> coordenador.exibirDisciplinas(unidade);
-                case 5 -> coordenador.exibirSalas(unidade);
-                case 6 -> coordenador.exibirGrupos(unidade);
+                case 1 -> {
+                    coordenador.criarSala(unidade, 1, (short) 1, (short) 5, (short) 1, "Laboratório");
+                    coordenador.criarSala(unidade, 2, (short) 2, (short) 5, (short) 1, "Sala de Aula");
+                }
+                case 2 -> {coordenador.criarGrupo(unidade, 1, "7° Ano", "Matutino", "120");
+                    coordenador.criarGrupo(unidade, 2, "9° Ano", "Vespertino", "160");}
+                case 3 -> { coordenador.criarDisciplinas(unidade, 1, "Matemática", "120987", "120", "Matutino", "Equa" +
+                        "ção 2° grau");
+                    coordenador.criarDisciplinas(unidade, 2, "Geografia", "130977", "160", "Vespertino", "Equação 1° " +
+                            "grau");}
+                case 4 -> System.out.println(coordenador.exibirDisciplinas(unidade));
+                case 5 -> System.out.println(coordenador.exibirSalas(unidade));
+                case 6 -> System.out.println(coordenador.exibirGrupos(unidade));
                 case 7 -> coordenador.gerarRelatório(unidade);
                 default -> System.out.println("Opção inválida!");
             }
         } while (opcao != 9);
     }
 
-    // Menu específico para professores
-    static void menuProfessor(Professor professor) {
+    private void menuProfessor(Professor professor) {
         int opcao;
         do {
             System.out.println("""
@@ -236,20 +233,18 @@ public class Main {
                     """);
             opcao = sc.nextInt();
 
-            // Chama métodos do professor baseados na escolha do usuário
             switch (opcao) {
-                case 1 -> professor.consultarDisciplinasMinistradas(unidade);
-                case 2 -> professor.consultarGrupos(unidade);
+                case 1 -> System.out.println(professor.consultarDisciplinasMinistradas(unidade));
+                case 2 -> System.out.println(professor.consultarGrupos(unidade));
                 case 3 -> professor.definirValoresAulas(2, 30);
-                case 4 -> professor.consultarAlunosInscritos(grupo);
+                case 4 -> System.out.println(professor.consultarAlunosInscritos(grupo));
                 case 5 -> mudarAreaProfessor(professor);
                 default -> System.out.println("Opção inválida!");
             }
         } while (opcao != 9);
     }
 
-    // Método para mudar a área de atuação de um professor
-    static void mudarAreaProfessor(Professor professor) {
+    private void mudarAreaProfessor(Professor professor) {
         System.out.println("""
                 Informe qual a sua área de atuação: 
                 | 1 - Ciências Humanas
@@ -260,7 +255,6 @@ public class Main {
         int opcao = sc.nextInt();
         Area areaAtuacao;
 
-        // Define a nova área de atuação com base na escolha do usuário
         switch (opcao) {
             case 1 -> areaAtuacao = Area.CIENCIAS_HUMANAS;
             case 2 -> areaAtuacao = Area.CIENCIAS_DA_NATUREZA;
@@ -271,8 +265,7 @@ public class Main {
         professor.setArea(areaAtuacao);
     }
 
-    // Menu específico para alunos
-    static void menuAluno(Aluno aluno) {
+    private void menuAluno(Aluno aluno) {
         int opcao;
         do {
             System.out.println("""
@@ -288,10 +281,9 @@ public class Main {
                     """);
             opcao = sc.nextInt();
 
-            // Chama métodos do aluno baseados na escolha do usuário
             switch (opcao) {
-                case 1 -> aluno.consultarDisciplinas(unidade);
-                case 2 -> aluno.consultarGrupos(unidade);
+                case 1 -> System.out.println(aluno.consultarDisciplinas(unidade));
+                case 2 -> System.out.println(aluno.consultarGrupos(unidade));
                 case 3 -> aluno.realizarInscricaoGrupo(grupo, aluno);
                 case 4 -> aluno.cancelarInscricaoGrupo(grupo, aluno);
                 case 5 -> aluno.realizarMatriculaDisciplina(disciplina);

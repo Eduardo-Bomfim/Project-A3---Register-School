@@ -6,10 +6,10 @@ public class Valores {
 
     // Atributos da classe Valores
     private double valorAula;
-    private int dataHora;
+    private String dataHora;
 
     // Construtor da classe Valores
-    public Valores(double valorAula, int dataHora){
+    public Valores(double valorAula, String dataHora){
         this.valorAula = valorAula;
         this.dataHora = dataHora;
     }
@@ -23,11 +23,11 @@ public class Valores {
         this.valorAula = valorAula;
     }
 
-    public int getDataHora() {
+    public String getDataHora() {
         return dataHora;
     }
 
-    public void setDataHora(int dataHora) {
+    public void setDataHora(String dataHora) {
         this.dataHora = dataHora;
     }
 

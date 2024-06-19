@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab1b6bc-f8fa-4342-b920-ed415de8fa89" name="Changes" comment="uodate Integrantes" />
+    <list default="true" id="cab1b6bc-f8fa-4342-b920-ed415de8fa89" name="Changes" comment="uodate Integrantes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/aplicacao/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/aplicacao/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/disciplina/Disciplina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/disciplina/Disciplina.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entidades/coordenador/Coordenador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entidades/coordenador/Coordenador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entidades/professor/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entidades/professor/Professor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/grupo/Grupo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/grupo/Grupo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/registro/Registro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/registro/Registro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/sala/Sala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/sala/Sala.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/unidade/Unidade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/unidade/Unidade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utilitarios/Valores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utilitarios/Valores.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,6 +111,8 @@
       <workItem from="1717641017063" duration="4154000" />
       <workItem from="1717671359048" duration="121000" />
       <workItem from="1717707974205" duration="7701000" />
+      <workItem from="1717725584568" duration="1610000" />
+      <workItem from="1717729355462" duration="5435000" />
     </task>
     <task id="LOCAL-00003" summary="add method toString, consultarAlunos, consultarProfessores and consultarCoordenadores">
       <option name="closed" value="true" />

@@ -108,8 +108,8 @@ public class Unidade {
 
     // Método para adicionar uma disciplina
     public void criarDisciplina(long id, String nome, String codigo, String cargaHoraria, String turno,
-                                String assuntos, Area areaDisciplina) {
-        disciplinas.add(new Disciplina(id, nome, codigo, cargaHoraria, turno, assuntos, areaDisciplina));
+                                String assuntos) {
+        disciplinas.add(new Disciplina(id, nome, codigo, cargaHoraria, turno, assuntos));
     }
 
     // Método para remover uma disciplina com base no id
@@ -157,5 +157,20 @@ public class Unidade {
             }
         }
         throw new EEstadoIlegalException("Grupo não encontrado.");
+    }
+
+    @Override
+    public String toString() {
+        return "Unidade{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", bairro='" + bairro + '\'' +
+                ", telefone='" + telefone + '\'' +
+                ", cnpj='" + cnpj + '\'' +
+                ", limiteSala=" + limiteSala +
+                ", salas=" + salas +
+                ", disciplinas=" + disciplinas +
+                ", grupos=" + grupos +
+                '}';
     }
 }

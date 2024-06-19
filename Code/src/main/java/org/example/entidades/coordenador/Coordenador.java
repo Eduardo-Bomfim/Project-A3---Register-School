@@ -34,6 +34,10 @@ public class Coordenador extends Usuario {
         return unidade.getSalas(); // Exibe as salas da unidade
     }
 
+    public Sala exibirSalaEspecifica(Unidade unidade, long id){
+        return unidade.exibirSalaEspecifica(id);
+    }
+
     public ArrayList exibirGrupos(Unidade unidade){
         return unidade.getGrupos(); // Exibe os grupos da unidade
     }
@@ -54,10 +58,8 @@ public class Coordenador extends Usuario {
     }
 
     public void criarDisciplinas(Unidade unidade, long id, String nome, String codigo, String cargaHoraria,
-                                 String turno, String assuntos, Area areaDisciplina){
-        if (this.areaAtuacao == areaDisciplina){
-            unidade.criarDisciplina(id, nome, codigo, cargaHoraria, turno, assuntos, areaDisciplina); // Cria uma disciplina na unidade
-        }
+                                 String turno, String assuntos){
+        unidade.criarDisciplina(id, nome, codigo, cargaHoraria, turno, assuntos); // Cria uma disciplina na unidade
     }
 
     @Override

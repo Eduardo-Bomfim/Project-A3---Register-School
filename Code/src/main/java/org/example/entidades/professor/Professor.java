@@ -19,7 +19,7 @@ public class Professor extends Usuario {
     public Professor(long id, long registroAcademico, String nome, String email, String senha, Area area) {
         super(id, registroAcademico, nome, email, senha); // Chama o construtor da classe pai (Usuario)
         this.area = area; // Define a área de atuação
-        valores = new Valores(0, 0); // Inicializa o objeto Valores
+        valores = new Valores(30, "5 horas"); // Inicializa o objeto Valores
     }
 
     // Getters e Setters para os atributos
